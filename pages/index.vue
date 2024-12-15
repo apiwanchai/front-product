@@ -5,7 +5,6 @@
       <h1 class="display-4 mb-4">Welcome to My Store</h1>
       <p class="lead">Browse a variety of products and make your shopping experience amazing!</p>
       
-      <!-- Button to navigate to the products page -->
       <nuxt-link to="/products" class="btn btn-primary btn-lg mt-4">
         Go to Products
       </nuxt-link>

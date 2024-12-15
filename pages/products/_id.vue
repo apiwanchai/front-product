@@ -2,7 +2,6 @@
     <div class="container mt-5">
       <h1 class="text-center mb-4">{{ product.name }}</h1>
   
-      <!-- Product Detail Section -->
       <div class="row">
         <div class="col-md-6">
           <img :src="product.image" :alt="product.name" class="img-fluid rounded shadow-sm" />
@@ -19,7 +18,7 @@
   export default {
     middleware: 'auth',
     async asyncData({ $axios, params }) {
-      const product = await $axios.$get(`/api/products/${params.id}`);
+      const product = await $axios.$get(`/products/${params.id}`);
       return { product };
     },
     head() {
@@ -34,7 +33,7 @@
   </script>
   
   <style scoped>
-  /* Custom styling for product details */
+
   img {
     max-height: 400px;
     object-fit: cover;

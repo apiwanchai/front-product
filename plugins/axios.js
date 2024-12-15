@@ -4,6 +4,6 @@ export default function ({ $axios }) {
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
-    console.log('Making request to ' + config.url);
+   ;
   });
 }

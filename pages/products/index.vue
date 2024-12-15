@@ -9,7 +9,7 @@
             <div class="card-body">
               <h5 class="card-title text-primary">{{ product.name }}</h5>
               <p class="card-text fw-bold text-muted">Price: ${{ product.price }}</p>
-              <nuxt-link :to="`/products/${product.id}`" class="btn btn-outline-primary w-100">
+              <nuxt-link :to="`/products/${product.sku}`" class="btn btn-outline-primary w-100">
                 View Details
               </nuxt-link>
             </div>
@@ -63,10 +63,9 @@
     },
   
     methods: {
-     
       async fetchProducts(page) {
         try {
-          const response = await this.$axios.$get('/api/products', {
+          const response = await this.$axios.$get('/products', {
             params: { page, pageSize: this.pageSize },
           });
   
@@ -74,7 +73,7 @@
           this.currentPage =  response.page;
           this.totalPages = response.totalPages;
   
-          console.log("Fetched data:", response);
+         
         } catch (error) {
           console.error('Error fetching products:', error);
         }

@@ -10,7 +10,7 @@ export const state = () => ({
   
   export const actions = {
     async fetchProducts({ commit }) {
-      const response = await this.$axios.$get('/api/products');
+      const response = await this.$axios.$get('/products');
       commit('setProducts', response);
     }
   };

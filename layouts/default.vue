@@ -1,6 +1,6 @@
 <template>
     <div>
-      <!-- Header Section -->
+
       <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
           <div class="container">
@@ -36,7 +36,6 @@
         </nav>
       </header>
   
-      <!-- Main Content -->
       <main class="container mt-4">
         <nuxt />
       </main>

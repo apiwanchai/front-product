@@ -14,6 +14,7 @@
                 required
                 placeholder="Enter your username"
               />
+              <p>username: test </p>
             </div>
             <div class="form-group mb-3">
               <label for="password" class="form-label">Password</label>
@@ -25,6 +26,7 @@
                 required
                 placeholder="Enter your password"
               />
+              <p>passowrd: test </p>
             </div>
             <button type="submit" class="btn btn-primary w-100">
               Login
@@ -54,7 +56,7 @@
     methods: {
       async login() {
         try {
-          const response = await this.$axios.$post('/api/auth/login', {
+          const response = await this.$axios.$post('/login', {
             username: this.username,
             password: this.password
           });
@@ -62,7 +64,7 @@
           this.$router.push('/products');
         } catch (error) {
           console.error('Login failed:', error.response ? error.response.data : error.message);
-          alert('Login failed. Please check your credentials.');
+          alert('Login failed. Please check your username and password.');
         }
       }
     }
@@ -70,7 +72,7 @@
   </script>
   
   <style scoped>
-  /* เพิ่มการตกแต่งให้กับฟอร์ม */
+ 
   form {
     background-color: #f8f9fa;
     border-radius: 8px;
