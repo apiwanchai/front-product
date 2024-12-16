@@ -50,6 +50,11 @@
   <script>
   export default {
     middleware: 'auth',
+    head() {
+    return {
+      title: 'Products',
+    };
+  },
     data() {
       return {
         products: [], 
